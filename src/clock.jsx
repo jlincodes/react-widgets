@@ -32,8 +32,16 @@ export default class Clock extends React.Component {
     return (
       <div>
         <h1>Clock</h1>
-        <p>The Current Time is: {hours}:{minutes}:{seconds}</p>
-        <p>Today is: {date}</p>
+        <div className='clock-wrapper'>
+          <p>
+            <span>The Current Time is:</span>
+            <span>{hours}:{minutes}:{seconds}</span>
+          </p>
+          <p>
+            <span>Today is:</span>
+            <span>{date}</span>
+          </p>
+        </div>
       </div>
     );
   }
