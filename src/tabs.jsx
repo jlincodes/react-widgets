@@ -14,7 +14,7 @@ class Headers extends React.Component {
         <li
           key={index}
           className={status}
-          onClock={this.props.onSelectedTab.bind(null, index)}>
+          onClick={this.props.onSelectedTab.bind(null, index)}>
           {title}{' '}
         </li>
       );
@@ -25,14 +25,15 @@ class Headers extends React.Component {
   }
 }
 
-export default class Tab extends React.Component {
+export default class Tabs extends React.Component {
   constructor(props) {
     super(props);
     this.state = { selectedPane: 0 };
+    this.selectTab = this.selectTab.bind(this);
   }
 
   selectTab(num) {
-    this.setState({ selectPane: num });
+    this.setState({ selectedPane: num });
   }
 
   render() {
