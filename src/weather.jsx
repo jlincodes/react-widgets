@@ -12,21 +12,36 @@ export default class Weather extends React.Component {
   }
 
   locWeather(position) {
+    // let lat = position.coords.latitude;
+    // let lon = position.coords.longitude;
+    // // console.log(lat);
+    // // console.log(lon);
+    // let url = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`;
+    // const apiKey = "1833ae133bacd21f1acde07a44b0fe68";
+    // url += `&APPID=${apiKey}`;
+    //
+    // const request = new XMLHttpRequest();
+    // request.open('GET', url, true);
+    // request.onreadystatechange = () => {
+    //   if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
+    //     let kel = JSON.parse(request.response).main.temp;
+    //     let farh = Math.round((kel - 273.15) * 1.8 + 32);
+    //     this.setState({ temp: farh });
+    //   }
+    // };
+    // request.send();
+
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
-    // console.log(lat);
-    // console.log(lon);
-    let apiKey = "1833ae133bacd21f1acde07a44b0fe68";
-    let url = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`;
-    url += `&APPID=${apiKey}`;
-
+    let key = "1833ae133bacd21f1acde07a44b0fe68";
+    let url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${key}`;
     const request = new XMLHttpRequest();
-    request.open('GET', url, true);
+    request.open('GET',url, true);
     request.onreadystatechange = () => {
-      if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
-        let kel = JSON.parse(request.response).main.temp;
+      if(request.readyState === XMLHttpRequest.DONE && request.status === 200) {
+        let kel = JSON.parse(request.response).main.temp; //in kelvin
         let farh = Math.round((kel - 273.15) * 1.8 + 32);
-        this.setState({ temp: farh });
+        this.setState({temp: farh});
       }
     };
     request.send();
