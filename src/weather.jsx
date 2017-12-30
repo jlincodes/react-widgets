@@ -18,7 +18,7 @@ export default class Weather extends React.Component {
     // console.log(lon);
     let apiKey = "1833ae133bacd21f1acde07a44b0fe68";
     let url = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`;
-    // url += `&APPID=${apiKey}`;
+    url += `&APPID=${apiKey}`;
 
     const request = new XMLHttpRequest();
     request.open('GET', url, true);
