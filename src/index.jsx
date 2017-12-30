@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Clock from './clock';
 import Tabs from './tabs';
 import Weather from './weather';
+import Autocomplete from './autocomplete';
 
 const panes = [
   {title: 'one', content: 'first'},
@@ -19,6 +20,7 @@ class Root extends React.Component {
         <Weather />
         <div>
           <Tabs panes={panes} />
+          <Autocomplete />
         </div>
       </div>
     );

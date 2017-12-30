@@ -962,6 +962,10 @@ var _weather = __webpack_require__(29);
 
 var _weather2 = _interopRequireDefault(_weather);
 
+var _autocomplete = __webpack_require__(30);
+
+var _autocomplete2 = _interopRequireDefault(_autocomplete);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -992,7 +996,8 @@ var Root = function (_React$Component) {
         _react2.default.createElement(
           'div',
           null,
-          _react2.default.createElement(_tabs2.default, { panes: panes })
+          _react2.default.createElement(_tabs2.default, { panes: panes }),
+          _react2.default.createElement(_autocomplete2.default, null)
         )
       );
     }
@@ -18686,6 +18691,43 @@ var Weather = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Weather;
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Autocomplete = function (_React$Component) {
+  _inherits(Autocomplete, _React$Component);
+
+  function Autocomplete() {
+    _classCallCheck(this, Autocomplete);
+
+    return _possibleConstructorReturn(this, (Autocomplete.__proto__ || Object.getPrototypeOf(Autocomplete)).apply(this, arguments));
+  }
+
+  return Autocomplete;
+}(_react2.default.Component);
+
+exports.default = Autocomplete;
 
 /***/ })
 /******/ ]);
