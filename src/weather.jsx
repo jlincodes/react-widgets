@@ -3,7 +3,7 @@ import React from 'react';
 export default class Weather extends React.Component {
   constructor() {
     super();
-    this.state = { temp: null };
+    this.state = { weather: null };
     this.locWeather = this.locWeather.bind(this);
   }
 
@@ -21,14 +21,15 @@ export default class Weather extends React.Component {
     url += `&APPID=${apiKey}`;
 
     const request = new XMLHttpRequest();
-    request.open('GET', url, true);
     request.onreadystatechange = () => {
       if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
-        let kel = JSON.parse(request.response).main.temp;
-        let farh = Math.round((kel - 273.15) * 1.8 + 32);
-        this.setState({ temp: farh });
+        console.log(request.response);
+        const data = JSON.parse(request.responseText);
+        this.setState({ weather: data });
       }
     };
+    
+    request.open('GET', url, true);
     request.send();
   }
 
@@ -37,8 +38,8 @@ export default class Weather extends React.Component {
       <div>
         <h1>Weather</h1>
         <div className="weather">
-          <h2>The current temperature is:</h2>
-          <h2>{this.state.temp} &#176;</h2>
+          <p>The current temperature is:</p>
+          <p>{this.state.temp} &#176;</p>
         </div>
       </div>
     );
