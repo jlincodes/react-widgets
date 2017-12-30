@@ -18523,7 +18523,7 @@ var Tabs = function (_React$Component2) {
       var pane = this.props.panes[this.state.selectedPane];
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'tabs' },
         _react2.default.createElement(
           'h1',
           null,
@@ -18538,7 +18538,7 @@ var Tabs = function (_React$Component2) {
             panes: this.props.panes }),
           _react2.default.createElement(
             'div',
-            null,
+            { className: 'tab-content' },
             _react2.default.createElement(
               'article',
               null,
