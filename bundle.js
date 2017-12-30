@@ -18626,6 +18626,45 @@ var Weather = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
+      var content = void 0;
+
+      if (this.state.weather) {
+        var weatherData = this.state.weather;
+        console.log(weatherData);
+        // gets current temp in kelvin, then convert to celcius
+        var currentTemp = Math.round((weatherData.main.temp - 273.5) * 1.8 + 32);
+        var location = weatherData.name;
+        var humidity = weatherData.main.humidity;
+        var windSpeed = weatherData.wind.speed;
+        content = _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'p',
+            null,
+            'The current temperature in ',
+            location,
+            ' is: ',
+            currentTemp,
+            ' \xB0 F'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'with ',
+            humidity,
+            '% humidity and winds at ',
+            windSpeed,
+            ' mph '
+          )
+        );
+      } else {
+        content = _react2.default.createElement(
+          'div',
+          null,
+          'loading weather...'
+        );
+      }
       return _react2.default.createElement(
         'div',
         null,
@@ -18637,17 +18676,7 @@ var Weather = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'weather' },
-          _react2.default.createElement(
-            'p',
-            null,
-            'The current temperature is:'
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            this.state.temp,
-            ' \xB0'
-          )
+          content
         )
       );
     }

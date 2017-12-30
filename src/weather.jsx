@@ -28,18 +28,34 @@ export default class Weather extends React.Component {
         this.setState({ weather: data });
       }
     };
-    
+
     request.open('GET', url, true);
     request.send();
   }
 
   render() {
+    let content;
+
+    if (this.state.weather) {
+      let weatherData = this.state.weather;
+      console.log(weatherData);
+      // gets current temp in kelvin, then convert to celcius
+      let currentTemp = Math.round((weatherData.main.temp - 273.5) *1.8 + 32);
+      let location = weatherData.name;
+      let humidity = weatherData.main.humidity;
+      let windSpeed = weatherData.wind.speed;
+      content = <div>
+                  <p>The current temperature in {location} is: {currentTemp} &#176; F</p>
+                  <p>with {humidity}&#37; humidity and winds at {windSpeed} mph </p>
+                </div>;
+    } else {
+      content = <div>loading weather...</div>;
+    }
     return (
       <div>
         <h1>Weather</h1>
         <div className="weather">
-          <p>The current temperature is:</p>
-          <p>{this.state.temp} &#176;</p>
+          {content}
         </div>
       </div>
     );
