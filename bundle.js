@@ -997,7 +997,7 @@ var Root = function (_React$Component) {
         _react2.default.createElement(_weather2.default, null),
         _react2.default.createElement(
           'div',
-          null,
+          { className: 'interactive' },
           _react2.default.createElement(_tabs2.default, { panes: panes }),
           _react2.default.createElement(_autocomplete2.default, { names: names })
         )

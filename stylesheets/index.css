@@ -4,6 +4,11 @@ body {
   justify-content: space-around;
 }
 
+.interactive {
+  display: flex;
+  justify-content: space-around;
+}
+
 .clock {
   background-color: orange;
   border: 2px solid black;

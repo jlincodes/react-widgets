@@ -41,7 +41,7 @@ class Root extends React.Component {
       <div>
         <Clock />
         <Weather />
-        <div>
+        <div className='interactive'>
           <Tabs panes={panes} />
           <Autocomplete names={names}/>
         </div>
