@@ -976,7 +976,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var panes = [{ title: 'one', content: 'first' }, { title: 'two', content: 'second' }, { title: 'three', content: 'third' }];
 
-var names = ['Emma', 'Olivia', 'Ava', 'Sophia', 'Isabella', 'Mia', 'Charlotte', 'Abigail', 'Emily', 'Harper', 'Noah', 'Liam', 'William', 'Mason', 'James', 'Benjamin', 'Jacob', 'Michael', 'Elijah', 'Ethan'];
+// popular names https://www.ssa.gov/oact/babynames/decades/century.html
+var names = ['Barbara', 'Charles', 'Christopher', 'David', 'Daniel', 'Elizabeth', 'James', 'Jennifer', 'Jessica', 'John', 'Linda', 'Margaret', 'Mary', 'Matthew', 'Patricia', 'Richard', 'Robert', 'Sarah', 'Susan', 'William'];
 
 var Root = function (_React$Component) {
   _inherits(Root, _React$Component);

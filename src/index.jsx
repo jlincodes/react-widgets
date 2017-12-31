@@ -12,27 +12,28 @@ const panes = [
   {title: 'three', content: 'third'},
 ];
 
+// popular names https://www.ssa.gov/oact/babynames/decades/century.html
 const names = [
-  'Emma',
-  'Olivia',
-  'Ava',
-  'Sophia',
-  'Isabella',
-  'Mia',
-  'Charlotte',
-  'Abigail',
-  'Emily',
-  'Harper',
-  'Noah',
-  'Liam',
-  'William',
-  'Mason',
+  'Barbara',
+  'Charles',
+  'Christopher',
+  'David',
+  'Daniel',
+  'Elizabeth',
   'James',
-  'Benjamin',
-  'Jacob',
-  'Michael',
-  'Elijah',
-  'Ethan'
+  'Jennifer',
+  'Jessica',
+  'John',
+  'Linda',
+  'Margaret',
+  'Mary',
+  'Matthew',
+  'Patricia',
+  'Richard',
+  'Robert',
+  'Sarah',
+  'Susan',
+  'William'
 ];
 
 class Root extends React.Component {
