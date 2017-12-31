@@ -5,6 +5,7 @@ export default class Autocomplete extends React.Component {
     super(props);
     this.state = { inputValue: '' };
     this.handleChange = this.handleChange.bind(this);
+    this.selectName = this.selectName.bind(this);
   }
 
   handleChange(event) {
@@ -49,7 +50,7 @@ export default class Autocomplete extends React.Component {
         <div className='autocomplete'>
           <input
             type='text'
-            value={this.state.value}
+            value={this.state.inputValue}
             onChange={this.handleChange} />
           <ul className='auto-list'>{matches}</ul>
         </div>

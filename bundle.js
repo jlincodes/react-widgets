@@ -18729,6 +18729,7 @@ var Autocomplete = function (_React$Component) {
 
     _this.state = { inputValue: '' };
     _this.handleChange = _this.handleChange.bind(_this);
+    _this.selectName = _this.selectName.bind(_this);
     return _this;
   }
 
@@ -18792,7 +18793,7 @@ var Autocomplete = function (_React$Component) {
           { className: 'autocomplete' },
           _react2.default.createElement('input', {
             type: 'text',
-            value: this.state.value,
+            value: this.state.inputValue,
             onChange: this.handleChange }),
           _react2.default.createElement(
             'ul',
