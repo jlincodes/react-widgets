@@ -18787,14 +18787,18 @@ var Autocomplete = function (_React$Component) {
           null,
           'Autocomplete'
         ),
-        _react2.default.createElement('input', {
-          type: 'text',
-          value: this.state.value,
-          onChange: this.handleChange }),
         _react2.default.createElement(
-          'ul',
-          { className: 'auto-list' },
-          matches
+          'div',
+          { className: 'autocomplete' },
+          _react2.default.createElement('input', {
+            type: 'text',
+            value: this.state.value,
+            onChange: this.handleChange }),
+          _react2.default.createElement(
+            'ul',
+            { className: 'auto-list' },
+            matches
+          )
         )
       );
     }

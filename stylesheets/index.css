@@ -81,3 +81,17 @@ body {
   text-align: center;
   padding: 10px;
 }
+
+.autocomplete {
+  background-color: lavender;
+  border: 1px solid black;
+}
+
+.autocomplete input {
+  margin: 10px;
+  padding: 5px;
+}
+
+.auto-list {
+  list-style: square;
+}
