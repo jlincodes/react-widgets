@@ -18705,6 +18705,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
@@ -18720,11 +18722,83 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Autocomplete = function (_React$Component) {
   _inherits(Autocomplete, _React$Component);
 
-  function Autocomplete() {
+  function Autocomplete(props) {
     _classCallCheck(this, Autocomplete);
 
-    return _possibleConstructorReturn(this, (Autocomplete.__proto__ || Object.getPrototypeOf(Autocomplete)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Autocomplete.__proto__ || Object.getPrototypeOf(Autocomplete)).call(this, props));
+
+    _this.state = { inputValue: '' };
+    _this.handleChange = _this.handleChange.bind(_this);
+    return _this;
   }
+
+  _createClass(Autocomplete, [{
+    key: 'handleChange',
+    value: function handleChange(event) {
+      this.setState({ inputValue: event.target.value });
+    }
+  }, {
+    key: 'findMatches',
+    value: function findMatches() {
+      var _this2 = this;
+
+      var matches = [];
+
+      if (this.state.inputValue.length === 0) {
+        return this.props.names;
+      }
+
+      this.props.names.forEach(function (name) {
+        var slice = name.slice(0, _this2.state.inputValue.length);
+        if (slice.toLowerCase() === _this2.state.inputValue.toLowerCase()) {
+          matches.push(name);
+        }
+      });
+
+      if (matches.length === 0) {
+        matches.push('No matches found.');
+      }
+
+      return matches;
+    }
+  }, {
+    key: 'selectName',
+    value: function selectName(event) {
+      var name = event.currentTarget.innerText;
+      this.setState({ inputValue: name });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this3 = this;
+
+      var matches = this.findMatches().map(function (match, i) {
+        return _react2.default.createElement(
+          'li',
+          { key: i, onClick: _this3.selectName },
+          match
+        );
+      });
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'h1',
+          null,
+          'Autocomplete'
+        ),
+        _react2.default.createElement('input', {
+          type: 'text',
+          value: this.state.value,
+          onChange: this.handleChange }),
+        _react2.default.createElement(
+          'ul',
+          { className: 'auto-list' },
+          matches
+        )
+      );
+    }
+  }]);
 
   return Autocomplete;
 }(_react2.default.Component);
