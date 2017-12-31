@@ -12,6 +12,29 @@ const panes = [
   {title: 'three', content: 'third'},
 ];
 
+const names = [
+  'Emma',
+  'Olivia',
+  'Ava',
+  'Sophia',
+  'Isabella',
+  'Mia',
+  'Charlotte',
+  'Abigail',
+  'Emily',
+  'Harper',
+  'Noah',
+  'Liam',
+  'William',
+  'Mason',
+  'James',
+  'Benjamin',
+  'Jacob',
+  'Michael',
+  'Elijah',
+  'Ethan'
+];
+
 class Root extends React.Component {
   render() {
     return (
@@ -20,7 +43,7 @@ class Root extends React.Component {
         <Weather />
         <div>
           <Tabs panes={panes} />
-          <Autocomplete />
+          <Autocomplete names={names}/>
         </div>
       </div>
     );

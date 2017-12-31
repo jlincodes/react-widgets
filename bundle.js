@@ -976,6 +976,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var panes = [{ title: 'one', content: 'first' }, { title: 'two', content: 'second' }, { title: 'three', content: 'third' }];
 
+var names = ['Emma', 'Olivia', 'Ava', 'Sophia', 'Isabella', 'Mia', 'Charlotte', 'Abigail', 'Emily', 'Harper', 'Noah', 'Liam', 'William', 'Mason', 'James', 'Benjamin', 'Jacob', 'Michael', 'Elijah', 'Ethan'];
+
 var Root = function (_React$Component) {
   _inherits(Root, _React$Component);
 
@@ -997,7 +999,7 @@ var Root = function (_React$Component) {
           'div',
           null,
           _react2.default.createElement(_tabs2.default, { panes: panes }),
-          _react2.default.createElement(_autocomplete2.default, null)
+          _react2.default.createElement(_autocomplete2.default, { names: names })
         )
       );
     }
