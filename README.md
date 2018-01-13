@@ -2,4 +2,6 @@
 - [x] Clock
 - [x] Weather
 - [x] Tabs
-- [ ] Autocomplete
+- [x] Autocomplete
+
+[Live Site](https://julielin0812.github.io/react-widgets/)
