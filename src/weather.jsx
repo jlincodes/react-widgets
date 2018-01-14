@@ -38,7 +38,6 @@ export default class Weather extends React.Component {
 
     if (this.state.weather) {
       let weatherData = this.state.weather;
-      console.log(weatherData);
       // gets current temp in kelvin, then convert to celcius
       let currentTemp = Math.round((weatherData.main.temp - 273.5) *1.8 + 32);
       let location = weatherData.name;

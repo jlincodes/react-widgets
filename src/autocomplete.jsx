@@ -48,10 +48,12 @@ export default class Autocomplete extends React.Component {
       <div>
         <h1>Autocomplete</h1>
         <div className='autocomplete'>
-          <input
-            type='text'
-            value={this.state.inputValue}
-            onChange={this.handleChange} />
+          <label>Search:
+            <input
+              type='text'
+              value={this.state.inputValue}
+              onChange={this.handleChange} />
+          </label>
           <ul className='auto-list'>{matches}</ul>
         </div>
       </div>

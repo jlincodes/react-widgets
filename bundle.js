@@ -18638,7 +18638,6 @@ var Weather = function (_React$Component) {
 
       if (this.state.weather) {
         var weatherData = this.state.weather;
-        console.log(weatherData);
         // gets current temp in kelvin, then convert to celcius
         var currentTemp = Math.round((weatherData.main.temp - 273.5) * 1.8 + 32);
         var location = weatherData.name;
@@ -18792,10 +18791,15 @@ var Autocomplete = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'autocomplete' },
-          _react2.default.createElement('input', {
-            type: 'text',
-            value: this.state.inputValue,
-            onChange: this.handleChange }),
+          _react2.default.createElement(
+            'label',
+            null,
+            'Search:',
+            _react2.default.createElement('input', {
+              type: 'text',
+              value: this.state.inputValue,
+              onChange: this.handleChange })
+          ),
           _react2.default.createElement(
             'ul',
             { className: 'auto-list' },
