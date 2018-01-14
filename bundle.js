@@ -18615,7 +18615,7 @@ var Weather = function (_React$Component) {
       var lon = position.coords.longitude;
       // console.log(lat);
       // console.log(lon);
-      var url = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon;
+      var url = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon;
       var apiKey = "1833ae133bacd21f1acde07a44b0fe68";
       url += '&APPID=' + apiKey;
 
@@ -18654,7 +18654,7 @@ var Weather = function (_React$Component) {
             location,
             ' is: ',
             currentTemp,
-            ' \xB0 F'
+            '\xB0 F'
           ),
           _react2.default.createElement(
             'p',

@@ -16,7 +16,7 @@ export default class Weather extends React.Component {
     let lon = position.coords.longitude;
     // console.log(lat);
     // console.log(lon);
-    let url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`;
     const apiKey = "1833ae133bacd21f1acde07a44b0fe68";
     url += `&APPID=${apiKey}`;
 
@@ -45,7 +45,7 @@ export default class Weather extends React.Component {
       let humidity = weatherData.main.humidity;
       let windSpeed = weatherData.wind.speed;
       content = <div>
-                  <p>The current temperature in {location} is: {currentTemp} &#176; F</p>
+                  <p>The current temperature in {location} is: {currentTemp}&#176; F</p>
                   <p>with {humidity}&#37; humidity and winds at {windSpeed} mph </p>
                 </div>;
     } else {
