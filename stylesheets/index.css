@@ -2,7 +2,7 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   display: flex;
   justify-content: space-around;
-  background: linear-gradient(to bottom right, rgba(209, 224, 255, 1), rgba(108, 100, 130, 1));
+  background: linear-gradient(to bottom right, rgba(209, 224, 255, 0.7), rgba(108, 100, 130, 0.9));
 }
 
 h1 {
