@@ -2,7 +2,7 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   display: flex;
   justify-content: space-around;
-  background: linear-gradient(to bottom right, rgba(209, 224, 255, 1), rgba(119, 125, 155, 1));
+  background: linear-gradient(to bottom right, rgba(209, 224, 255, 1), rgba(108, 100, 130, 1));
 }
 
 h1 {
@@ -95,6 +95,7 @@ h1 {
 .autocomplete {
   background-color: lavender;
   border: 1px solid black;
+  padding: 20px 10px;
 }
 
 .autocomplete label, input {
