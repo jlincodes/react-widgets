@@ -46,6 +46,19 @@ class Root extends React.Component {
           <Tabs panes={panes} />
           <Autocomplete names={names}/>
         </div>
+        <footer>
+          <ul>
+            <li>
+              <a href="https://github.com/julielin0812/react-widgets">Github Project Repo</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/julielin0812/">LinkedIn</a>
+            </li>
+            <li>
+              <a href="http://www.julielin.me/">Portfolio</a>
+            </li>
+          </ul>
+        </footer>
       </div>
     );
   }
