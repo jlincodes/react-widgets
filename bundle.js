@@ -1001,6 +1001,41 @@ var Root = function (_React$Component) {
           { className: 'interactive' },
           _react2.default.createElement(_tabs2.default, { panes: panes }),
           _react2.default.createElement(_autocomplete2.default, { names: names })
+        ),
+        _react2.default.createElement(
+          'footer',
+          null,
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                'a',
+                { href: 'https://github.com/julielin0812/react-widgets' },
+                'Github Project Repo'
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                'a',
+                { href: 'https://www.linkedin.com/in/julielin0812/' },
+                'LinkedIn'
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                'a',
+                { href: 'http://www.julielin.me/' },
+                'Portfolio'
+              )
+            )
+          )
         )
       );
     }
